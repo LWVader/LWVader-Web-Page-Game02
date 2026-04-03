@@ -17,8 +17,8 @@ class Particle {
     this.x = x;
     this.y = y;
     this.size = random(1, 3);
-    this.velX = random(-5, 5);
-    this.velY = random(-5, 5);
+    this.velX = random(-4, 4);
+    this.velY = random(-4, 4);
     this.alpha = 1; 
     this.color = random(0, 1) < 0.5 ? '#00fff2' : '#ffae00';
   }
