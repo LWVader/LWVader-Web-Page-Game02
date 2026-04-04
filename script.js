@@ -2,8 +2,8 @@ const para = document.querySelector('p');
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-const width = (canvas.width = 600);
-const height = (canvas.height = 600);
+const width = (canvas.width = 900);
+const height = (canvas.height = 900);
 
 const skullImg = new Image();
 skullImg.src = 'https://cdn-icons-png.flaticon.com/128/12537/12537322.png'; 

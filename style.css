@@ -12,22 +12,92 @@ h1 {
 }
 canvas {
     display: block;
+    max-width: 100%;
+    height: auto;
     align-content: center;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     background-color: #000;
     border: 4px solid #3AC561;
+    box-shadow: 0 0 10px #3AC561, inset 0 0 10px #3AC561;
 }
 section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 2em;
+    padding: 20px;
     color: white;
+    width: 80%;
+    border: 3px solid #3AC561;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #3AC561, inset 0 0 10px #3AC561;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
     
 }
-body {
+html, body {
     background-color: #000;
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+  
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+    .sidebar {
+        width: 100%;       
+        height: auto;      
+        position: static;  
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #3AC561; 
+    }
+    .content {
+        width: 100%;
+        padding: 10px;     
+    }
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+    section {
+        width: 95%;        
+    }    
+}
+
+.sidebar {
+  position: sticky; 
+  top: 0;
+  height: 100vh;
+  flex: 0 0 200px; 
+  background-color: #0d0d0d;
+  border-left: 2px solid #3AC561;
+  border-right: 2px solid #3AC561;
+  border-top: 2px solid #3AC561 ;
+  border-bottom: 2px solid #3AC561;
+  box-shadow: 0 0 10px #3AC561, inset 0 0 10px #3AC561;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 @keyframes spooky-pulse {
     0%, 100% {
